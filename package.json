@@ -7,7 +7,10 @@
       "build": "next build",
       "start": "next start",
       "lint": "next lint",
-      "start:inngest": "npx inngest-cli@1.8.0 dev"
+      "start:inngest": "npx inngest-cli@1.8.0 dev",
+      "start:prisma-reset": "npx prisma migrate reset",
+      "start:prisma-migrate": "npx prisma migrate dev",
+      "start:prisma-studio": "npx prisma studio"
    },
    "dependencies": {
       "@e2b/code-interpreter": "^1.5.1",
@@ -55,6 +58,7 @@
       "lucide-react": "^0.542.0",
       "next": "15.3.4",
       "next-themes": "^0.4.6",
+      "random-word-slugs": "^0.1.7",
       "react": "^19.0.0",
       "react-day-picker": "^9.9.0",
       "react-dom": "^19.0.0",
