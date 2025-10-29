@@ -4,6 +4,7 @@ import {
    createNetwork,
    createTool,
    gemini,
+   openai,
    Tool,
 } from '@inngest/agent-kit';
 import { Sandbox } from '@e2b/code-interpreter';
@@ -31,8 +32,11 @@ export const codeAgentFunction = inngest.createFunction(
          name: 'code-agent',
          description: 'An Expert coding agent',
          system: PROMPT,
-         model: gemini({
-            model: 'gemini-2.0-flash-lite',
+         model: openai({
+            model: 'gpt-4.1',
+            defaultParameters: {
+               temperature: 0.1,
+            },
          }),
          tools: [
             createTool({
